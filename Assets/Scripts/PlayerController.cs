@@ -5,13 +5,18 @@ public class PlayerController : MonoBehaviour
 {
 	[SerializeField] private float moveSpeed;
 	[SerializeField] private LayerMask solidObjectsLayer;
+	[SerializeField] private LayerMask grassLayer;
+
+	[SerializeField] private int grassBattleChance;
 	
 	private bool _isMoving;
 	private Vector2 _input;
 
 	private Animator _animator;
 
-	private float _solidObjectRadiusCheck = 0.2f;
+	private const float PlayerRadiusCheck = 0.2f;
+	
+	
 
 	private void Start()
 	{
@@ -58,10 +63,23 @@ public class PlayerController : MonoBehaviour
 
 		transform.position = targetPos;
 		_isMoving = false;
+
+		CheckForEncounters();
 	}
 
 	private bool IsWalkable(Vector3 targetPos)
 	{
-		return !Physics2D.OverlapCircle(targetPos, _solidObjectRadiusCheck, solidObjectsLayer);
+		return !Physics2D.OverlapCircle(targetPos, PlayerRadiusCheck, solidObjectsLayer);
+	}
+
+	private void CheckForEncounters()
+	{
+		if (Physics2D.OverlapCircle(transform.position, PlayerRadiusCheck, grassLayer)!=null)
+		{
+			if (Random.Range(0, 100) <= grassBattleChance)
+			{
+				Debug.Log("Encountered a wild pokemon!");
+			}
+		}
 	}
 }
