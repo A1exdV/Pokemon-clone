@@ -4,11 +4,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 	[SerializeField] private float moveSpeed;
-
+	[SerializeField] private LayerMask solidObjectsLayer;
+	
 	private bool _isMoving;
 	private Vector2 _input;
 
 	private Animator _animator;
+
+	private float _solidObjectRadiusCheck = 0.2f;
 
 	private void Start()
 	{
@@ -35,9 +38,11 @@ public class PlayerController : MonoBehaviour
 				targetPos.x += _input.x;
 				targetPos.y += _input.y;
 				
-				StartCoroutine(Move(targetPos));
+				if(IsWalkable(targetPos))
+					StartCoroutine(Move(targetPos));
 			}
 		}
+		
 		
 		_animator.SetBool("isMoving",_isMoving);
 	}
@@ -53,5 +58,10 @@ public class PlayerController : MonoBehaviour
 
 		transform.position = targetPos;
 		_isMoving = false;
+	}
+
+	private bool IsWalkable(Vector3 targetPos)
+	{
+		return !Physics2D.OverlapCircle(targetPos, _solidObjectRadiusCheck, solidObjectsLayer);
 	}
 }
