@@ -48,10 +48,13 @@ public class Pokemon
 			Critical = critical,
 			Fainted = false
 		};
+
+		var attack = (move.Base.IsSpecial) ? attacker.SpAttack : attacker.Attack;
+		var defence = (move.Base.IsSpecial) ? attacker.SpDefense : attacker.Defense;
 		
 		var modifiers = Random.Range(0.85f, 1f)* type*critical;
 		var a = (2 * attacker.Level + 10) / 250f;
-		var d = a * move.Base.Power * ((float)attacker.Attack / Defense) + 2;
+		var d = a * move.Base.Power * ((float)attack / defence) + 2;
 		var damage = Mathf.FloorToInt(d * modifiers);
 		HP -= damage;
 		if (HP <= 0)
