@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
-  m_Name: TailWhip
+  m_Name: SolarBeam
   m_EditorClassIdentifier: 
-  name: Tail Whip
-  description: 'Tail Whip lowers the target''s Defense by one stage.
+  name: Solar Beam
+  description: 'The user of Solar Beam will absorb light on the first turn. On the
+    second turn, Solar Beam deals damage.
 
-    Stats can
-    be lowered to a minimum of -6 stages each.'
-  type: 1
-  power: 0
+    
+
+    During intense sunlight or
+    when holding a Power Herb, Solar Beam executes in one turn. During rain, hail
+    or a sandstorm its power decreases by 50%.'
+  type: 5
+  power: 120
   accuracy: 100
-  pp: 30
+  pp: 10

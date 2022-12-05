@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
-  m_Name: TailWhip
+  m_Name: SkullBash
   m_EditorClassIdentifier: 
-  name: Tail Whip
-  description: 'Tail Whip lowers the target''s Defense by one stage.
+  name: Skull Bash
+  description: 'The user of Skull Bash will tuck in its head on the first turn and
+    raise its Defense by one stage. On the second turn, Skull Bash deals damage.
 
-    Stats can
-    be lowered to a minimum of -6 stages each.'
+    
+
+    If
+    the user is holding a Power Herb, Skull Bash executes in one turn.'
   type: 1
-  power: 0
+  power: 100
   accuracy: 100
-  pp: 30
+  pp: 15

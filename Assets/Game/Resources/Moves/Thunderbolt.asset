@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
-  m_Name: TailWhip
+  m_Name: Thunderbolt
   m_EditorClassIdentifier: 
-  name: Tail Whip
-  description: 'Tail Whip lowers the target''s Defense by one stage.
-
-    Stats can
-    be lowered to a minimum of -6 stages each.'
-  type: 1
-  power: 0
+  name: Thunderbolt
+  description: "Thunderbolt deals damage and has a 10% chance of paralyzing the target.\r\n\r\nElectric
+    type Pok\xE9mon, those with the ability Limber or those behind a Substitute cannot
+    be paralyzed."
+  type: 4
+  power: 95
   accuracy: 100
-  pp: 30
+  pp: 15

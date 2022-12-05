@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
-  m_Name: TailWhip
+  m_Name: Agility
   m_EditorClassIdentifier: 
-  name: Tail Whip
-  description: 'Tail Whip lowers the target''s Defense by one stage.
+  name: Agility
+  description: 'Agility raises the user''s Speed by two stages.
 
-    Stats can
-    be lowered to a minimum of -6 stages each.'
-  type: 1
+    
+
+    Stats
+    can be raised to a maximum of +6 stages each.'
+  type: 11
   power: 0
-  accuracy: 100
+  accuracy: 0
   pp: 30

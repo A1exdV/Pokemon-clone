@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
+  m_Name: LeechSeed
+  m_EditorClassIdentifier: 
+  name: Leech Seed
+  description: "Leech Seed plants a seed on the target that drains 1\u20448 of its
+    maximum HP at the end of each turn and restores it to the user, or any Pok\xE9mon
+    that takes its place. It does not work on Grass-type Pok\xE9mon; it does technically
+    work against Pok\xE9mon with the Magic Guard ability, but no HP will be sapped.\r\n\r\nIf
+    the user is holding a Big Root, the move still saps the same amount of HP but
+    recovers 30% more than normal. For example, if a Pok\xE9mon has 320 HP, Leech
+    Seed would cause them to lose 40 HP each turn but the seeder would recover 52
+    HP.\r\n\r\nIf used on a Pok\xE9mon with the ability Liquid Ooze, the user instead
+    loses the HP it would have otherwise gained. The seeded Pok\xE9mon can clear
+    Leech Seed by switching out or using Rapid Spin."
+  type: 5
+  power: 0
+  accuracy: 90
+  pp: 10

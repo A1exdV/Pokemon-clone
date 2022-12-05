@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Gun
   description: Water Gun deals damage with no additional effect.
-  type: 0
+  type: 3
   power: 40
   accuracy: 100
   pp: 25
