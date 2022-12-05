@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Scratch
   m_EditorClassIdentifier: 
   name: Scratch
-  description: 
+  description: It deals damage with no additional effects.
   type: 1
   power: 40
   accuracy: 100
-  pp: 20
+  pp: 35

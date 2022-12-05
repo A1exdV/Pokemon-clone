@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Ember
   m_EditorClassIdentifier: 
   name: Ember
-  description: 
+  description: Ember deals damage and has a 10% chance of burning the target.
   type: 2
   power: 40
   accuracy: 100
-  pp: 20
+  pp: 25

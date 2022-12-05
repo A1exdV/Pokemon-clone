@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Growl
   m_EditorClassIdentifier: 
   name: Growl
-  description: 
+  description: Growl lowers the target's Attack by one stage.
   type: 1
   power: 0
   accuracy: 100
-  pp: 20
+  pp: 40

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Tackle
   m_EditorClassIdentifier: 
   name: Tackle
-  description: 
+  description: "Tackle is one of the most common and basic moves a Pok\xE9mon learns.
+    It deals damage with no additional effects."
   type: 1
   power: 40
   accuracy: 100
-  pp: 20
+  pp: 35

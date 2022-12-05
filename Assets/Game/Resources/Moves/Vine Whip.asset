@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Vine Whip
   m_EditorClassIdentifier: 
   name: Vine Whipe
-  description: 
+  description: Vine Whip deals damage with no additional effect.
   type: 5
   power: 45
   accuracy: 100
-  pp: 20
+  pp: 25
