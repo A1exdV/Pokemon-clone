@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
   m_Name: ThunderShock
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  type: 0
-  power: 0
-  accuracy: 0
-  pp: 0
+  name: 'Thunder Shock '
+  description: "Thunder Shock deals damage and has a 10% chance of paralyzing the
+    target.\r\n\r\nElectric type Pok\xE9mon, those with the ability Limber or those
+    behind a Substitute cannot be paralyzed."
+  type: 4
+  power: 40
+  accuracy: 100
+  pp: 30

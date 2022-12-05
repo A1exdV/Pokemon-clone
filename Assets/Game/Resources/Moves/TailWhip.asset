@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
   m_Name: TailWhip
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: Tail Whip
+  description: 'Tail Whip lowers the target''s Defense by one stage.
+
+    Stats
+    can be lowered to a minimum of -6 stages each.'
   type: 0
   power: 0
-  accuracy: 0
-  pp: 0
+  accuracy: 100
+  pp: 30

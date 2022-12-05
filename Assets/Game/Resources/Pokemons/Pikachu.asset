@@ -12,16 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2555dc87f78624e88323df4e3404de, type: 3}
   m_Name: Pikachu
   m_EditorClassIdentifier: 
-  name: 
+  name: Pikachu
   description: 
-  frontSprite: {fileID: 0}
-  backSprite: {fileID: 0}
-  type1: 0
+  frontSprite: {fileID: 21300000, guid: e79b17b0da40597488a42fba37ba27e8, type: 3}
+  backSprite: {fileID: 21300000, guid: 8e58db56600ebd4448260ff600a22eb8, type: 3}
+  type1: 4
   type2: 0
-  maxHp: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  learnableMoves: []
+  maxHp: 35
+  attack: 55
+  defense: 40
+  spAttack: 50
+  spDefense: 50
+  speed: 90
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: d9c536fa19d380947ac2cc63e01c01b5, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: e8ff541a0f00fa144908981c2d5abfe1, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 31f96d0cee1c80940a7daecdc35384ee, type: 2}
+    level: 1

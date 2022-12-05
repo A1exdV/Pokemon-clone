@@ -12,16 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2555dc87f78624e88323df4e3404de, type: 3}
   m_Name: Squirtle
   m_EditorClassIdentifier: 
-  name: 
+  name: Squirtle
   description: 
-  frontSprite: {fileID: 0}
-  backSprite: {fileID: 0}
-  type1: 0
+  frontSprite: {fileID: 21300000, guid: 818cf159951cf9a4e8e810b2bbab4096, type: 3}
+  backSprite: {fileID: 21300000, guid: 18fc6e8e3f72b154fba88f358748be28, type: 3}
+  type1: 3
   type2: 0
-  maxHp: 0
-  attack: 0
-  defense: 0
-  spAttack: 0
-  spDefense: 0
-  speed: 0
-  learnableMoves: []
+  maxHp: 44
+  attack: 48
+  defense: 65
+  spAttack: 50
+  spDefense: 64
+  speed: 43
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: e92555e694b15ba44bceb48f1b2c60fb, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 7bbaeb9c1dd87424f920a0c8a7cc805e, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: fb56ee3d6131c8b408228ff7fbfbee75, type: 2}
+    level: 3

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1adf4d587aba484482a7a7359061fb3, type: 3}
   m_Name: WaterGun
   m_EditorClassIdentifier: 
-  name: 
-  description: 
+  name: Water Gun
+  description: Water Gun deals damage with no additional effect.
   type: 0
-  power: 0
-  accuracy: 0
-  pp: 0
+  power: 40
+  accuracy: 100
+  pp: 25
