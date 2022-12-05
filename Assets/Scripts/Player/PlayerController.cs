@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private LayerMask grassLayer;
 
 	[SerializeField] private int grassBattleChance;
+
+	public event Action OnEncountered;
 	
 	private bool _isMoving;
 	private Vector2 _input;
@@ -24,7 +28,7 @@ public class PlayerController : MonoBehaviour
 		_animator = GetComponent<Animator>();
 	}
 
-	private void Update()
+	public void HandleUpdate()
 	{
 		if (!_isMoving)
 		{
@@ -79,6 +83,8 @@ public class PlayerController : MonoBehaviour
 			if (Random.Range(0, 100) <= grassBattleChance)
 			{
 				Debug.Log("Encountered a wild pokemon!");
+				_animator.SetBool("isMoving",false);
+				if (OnEncountered != null) OnEncountered();
 			}
 		}
 	}
