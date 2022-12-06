@@ -8,12 +8,20 @@ public class PokemonParty : MonoBehaviour
 {
 	[SerializeField] private List<Pokemon> pokemons;
 
+	public List<Pokemon> Pokemons
+	{
+		get
+		{
+			return pokemons;
+		}
+	}
 	private void Start()
 	{
 		foreach (var pokemon in pokemons)
 		{
 			pokemon.Initialization();
 		}
+		print($"${{Total pokemons: {pokemons.Count}}}");
 	}
 
 	public Pokemon GetHealthyPokemon()
