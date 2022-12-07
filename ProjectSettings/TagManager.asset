@@ -19,7 +19,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Roof
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1206650253
+    locked: 0
+  - name: Roof
+    uniqueID: 103532757
     locked: 0

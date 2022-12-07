@@ -7,19 +7,21 @@ public class BattleDialogBox : MonoBehaviour
 {
 	[SerializeField] private int lettersPerSecond;
 
-	[SerializeField] private Color highlightedColor;
-
-	
 	[SerializeField] private Text dialogText;
 	[SerializeField] private GameObject actionSelector;
+	[SerializeField] private GameObject actionSelectorArrows;
 	[SerializeField] private GameObject moveSelector;
+	[SerializeField] private GameObject moveSelectorArrows;
 	[SerializeField] private GameObject moveDetails;
-
-	[SerializeField] private List<Text> actionTexts;
+	
+	[SerializeField] private List<Image> actionArrows;
+	[SerializeField] private List<Image> moveArrows;
 	[SerializeField] private List<Text> moveTexts;
 	
 	[SerializeField] private Text ppText;
 	[SerializeField] private Text typeText;
+
+	[SerializeField] private Color transparent;
 
 		public void SetDialog(string dialog)
 	{
@@ -45,35 +47,37 @@ public class BattleDialogBox : MonoBehaviour
 	public void EnableActionSelector(bool Enabled)
 	{
 		actionSelector.SetActive(Enabled);
+		actionSelectorArrows.SetActive(Enabled);
 	}
 	public void EnableMoveSelector(bool Enabled)
 	{
 		moveSelector.SetActive(Enabled);
+		moveSelectorArrows.SetActive(Enabled);
 		moveDetails.SetActive(Enabled);
 	}
 
-	public void UpdateActionSelection(int selectedAction)
+	public void UpdateActionArrowSelection(int selectedAction)
 	{
-		for (var i = 0; i < actionTexts.Count; i++)
+		for (var i = 0; i < actionArrows.Count; i++)
 		{
 			if (i == selectedAction)
-				actionTexts[i].color = highlightedColor;
+				actionArrows[i].color = Color.white;
 			else
 			{
-				actionTexts[i].color = Color.black;
+				actionArrows[i].color = transparent;
 			}
 
 		}
 	}
-	public void UpdateMoveSelection(int selectedMove, Move move)
+	public void UpdateMoveArrowSelection(int selectedMove, Move move)
 		{
-			for (var i = 0; i < moveTexts.Count; i++)
+			for (var i = 0; i < moveArrows.Count; i++)
 			{
 				if (i == selectedMove)
-					moveTexts[i].color = highlightedColor;
+					moveArrows[i].color = Color.white;
 				else
 				{
-					moveTexts[i].color = Color.black;
+					moveArrows[i].color = transparent;
 				}
 	
 			}
@@ -83,7 +87,7 @@ public class BattleDialogBox : MonoBehaviour
 		}
 	public void SetMoveNames(List<Move> moves)
 	{
-		for (int i = 0; i < moveTexts.Count; i++)
+		for (int i = 0; i < moveArrows.Count; i++)
 		{
 			if (i < moves.Count)
 				moveTexts[i].text = moves[i].Base.Name;

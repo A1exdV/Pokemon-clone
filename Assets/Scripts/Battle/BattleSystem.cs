@@ -201,7 +201,7 @@ public class BattleSystem : MonoBehaviour
 
 		_currentAction = Mathf.Clamp(_currentAction, 0, 3);
 		
-		dialogBox.UpdateActionSelection(_currentAction);
+		dialogBox.UpdateActionArrowSelection(_currentAction);
 
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
@@ -243,7 +243,7 @@ public class BattleSystem : MonoBehaviour
 	        
 	        _currentMove = Mathf.Clamp(_currentMove, 0, playerUnit.Pokemon.Moves.Count-1);
 	        
-	        dialogBox.UpdateMoveSelection(_currentMove, playerUnit.Pokemon.Moves[_currentMove]);
+	        dialogBox.UpdateMoveArrowSelection(_currentMove, playerUnit.Pokemon.Moves[_currentMove]);
 
 	        if (Input.GetKeyDown(KeyCode.Z))
 	        {
