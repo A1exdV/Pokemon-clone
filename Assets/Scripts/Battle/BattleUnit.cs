@@ -11,7 +11,9 @@ public class BattleUnit : MonoBehaviour
 	private int level;
 
 	[SerializeField] private bool isPlayerUnit;
-
+	[SerializeField] private BattleHud hud;
+	
+	
 	[SerializeField] private int outOfSceneX;
 	[SerializeField] private int faintY;
 	[SerializeField] private int attackDeltaX;
@@ -21,6 +23,9 @@ public class BattleUnit : MonoBehaviour
 	[SerializeField] private float faintAnimationDuration;
 	[SerializeField] private Color hitColor;
 	public Pokemon Pokemon { get; set; }
+
+	public BattleHud Hud => hud;
+	public bool IsPlayerUnit => isPlayerUnit;
 
 	private Image _image;
 	private Vector3 _originalPos;
@@ -43,6 +48,8 @@ public class BattleUnit : MonoBehaviour
 			_image.sprite = Pokemon.Base.FrontSprite;
 		}
 
+		hud.SetData(pokemon);
+		
 		_image.color = _originalColor;
 		PlayEnterAnimation();
 	}

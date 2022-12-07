@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 	{
 		return !Physics2D.OverlapCircle(targetPos, PlayerRadiusCheck, solidObjectsLayer);
 	}
-
+	
 	private void CheckForEncounters()
 	{
 		if (Physics2D.OverlapCircle(transform.position, PlayerRadiusCheck, grassLayer)!=null)
