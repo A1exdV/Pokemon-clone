@@ -21,7 +21,6 @@ public class PokemonParty : MonoBehaviour
 		{
 			pokemon.Initialization();
 		}
-		print($"${{Total pokemons: {pokemons.Count}}}");
 	}
 
 	public Pokemon GetHealthyPokemon()

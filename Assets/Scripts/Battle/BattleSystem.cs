@@ -263,19 +263,19 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.DownArrow))
 		{
-			_currentMember += 2;
+			_currentMember++;
 		}
 		else if(Input.GetKeyDown(KeyCode.UpArrow))
 		{
-			_currentMember -= 2;
+			_currentMember--;
 		}
-		if (Input.GetKeyDown(KeyCode.RightArrow))
+		if (Input.GetKeyDown(KeyCode.RightArrow) && _currentMember == 0)
 		{
-			_currentMember++;
+			_currentMember = 1;
 		}
 		else if(Input.GetKeyDown(KeyCode.LeftArrow))
 		{
-			_currentMember--;
+			_currentMember = 0;
 		}
 		_currentMember = Mathf.Clamp(_currentMember, 0, _playerParty.Pokemons.Count-1);
 		

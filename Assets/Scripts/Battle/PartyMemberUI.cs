@@ -7,26 +7,29 @@ public class PartyMemberUI : MonoBehaviour
 {
 	[SerializeField] private Text nameText;
 	[SerializeField] private Text levelText;
-	[SerializeField] private HPBar hpBar;
+	[SerializeField] private HPBarParty hpBarParty;
 
-	[SerializeField] private Color hightlightedColor;
+	[SerializeField] private Sprite selected;
+	[SerializeField] private Sprite notSelected;
+
+	[SerializeField] private Image background;
 
 	private Pokemon _pokemon;
 	public void SetData(Pokemon pokemon)
 	{
 		_pokemon = pokemon;
 		nameText.text = _pokemon.Base.Name;
-		levelText.text = "Lvl " + _pokemon.Level;
-		hpBar.SetHP((float)_pokemon.HP/_pokemon.MaxHp);
+		levelText.text = _pokemon.Level.ToString();
+		hpBarParty.SetHP((float)_pokemon.HP/_pokemon.MaxHp);
 	}
 
-	public void SetSelected(bool selected)
+	public void SetSelected(bool isSelected)
 	{
-		if (selected)
-			nameText.color = hightlightedColor;
+		if (isSelected)
+			background.sprite = this.selected;
 		else
-			nameText.color = Color.black;
-			
-		
+			background.sprite = this.notSelected;
+
+
 	}
 }
