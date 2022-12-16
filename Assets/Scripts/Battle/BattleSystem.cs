@@ -29,6 +29,7 @@ public class BattleSystem : MonoBehaviour
 	private int _currentAction; //0-Fight,1-Run
 	private int _currentMove;
 	private int _currentMember;
+	private int _lastPartySelected = 1;
 
 	private PokemonParty _playerParty;
 	private Pokemon _wildPokemon;
@@ -261,6 +262,9 @@ public class BattleSystem : MonoBehaviour
 
 	private void HandlePartySelection()
 	{
+		if(_currentMember!=0)
+			_lastPartySelected = _currentMember;
+		
 		if (Input.GetKeyDown(KeyCode.DownArrow))
 		{
 			_currentMember++;
@@ -271,13 +275,15 @@ public class BattleSystem : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.RightArrow) && _currentMember == 0)
 		{
-			_currentMember = 1;
+			if (_lastPartySelected != 0)
+				_currentMember = _lastPartySelected;
 		}
 		else if(Input.GetKeyDown(KeyCode.LeftArrow))
 		{
 			_currentMember = 0;
 		}
 		_currentMember = Mathf.Clamp(_currentMember, 0, _playerParty.Pokemons.Count-1);
+		
 		
 		partyScreen.UpdateMemberSelection(_currentMember);
 

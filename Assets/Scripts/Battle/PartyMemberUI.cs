@@ -9,10 +9,8 @@ public class PartyMemberUI : MonoBehaviour
 	[SerializeField] private Text levelText;
 	[SerializeField] private HPBarParty hpBarParty;
 
-	[SerializeField] private Sprite selected;
-	[SerializeField] private Sprite notSelected;
-
 	[SerializeField] private Image background;
+	[SerializeField] private Image backgroundSelected;
 
 	private Pokemon _pokemon;
 	public void SetData(Pokemon pokemon)
@@ -26,9 +24,16 @@ public class PartyMemberUI : MonoBehaviour
 	public void SetSelected(bool isSelected)
 	{
 		if (isSelected)
-			background.sprite = this.selected;
+		{
+			background.enabled= false;
+			backgroundSelected.enabled = true;
+			
+		}
 		else
-			background.sprite = this.notSelected;
+		{
+			background.enabled= true;
+			backgroundSelected.enabled = false;
+		}
 
 
 	}
